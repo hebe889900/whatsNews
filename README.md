@@ -1,1 +1,1 @@
-# legend-coder
+# A personalized news feeder app
