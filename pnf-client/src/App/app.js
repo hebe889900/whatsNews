@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
 
+import NewsPanel from '../NewsPanel/NewsPanel';
 class App extends Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class App extends Component {
         <img className='logo' src={logo} alt='logo' />
         <div className='container'>
             // Todo : Newspanel
+            <NewsPanel />
         </div>
       </div>
     );
