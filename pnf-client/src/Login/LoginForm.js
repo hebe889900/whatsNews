@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import './LoginForm.css';
 
 // because LoginForm doesn't have complicated logic
@@ -40,4 +40,9 @@ const LoginForm = ({
     </div>
  );
 
+LoginForm.propTyes = {
+  onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  errors: PropTypes.object.isRequired
+};
 export default LoginForm;
