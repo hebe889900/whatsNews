@@ -41,6 +41,8 @@ const LoginForm = ({
  );
 
 LoginForm.propTyes = {
+  // You can chain any of the above with `isRequired` to make sure a warning
+  // is shown if the prop isn't provided.
   onSubmit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   errors: PropTypes.object.isRequired
