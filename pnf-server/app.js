@@ -4,6 +4,7 @@ var path = require('path');
 
 var index = require('./routes/index');
 var news = require('./routes/news');
+var passport = require('passport');
 
 var app = express();
 
@@ -15,6 +16,13 @@ app.use('/static', express.static(path.join(__dirname, '../pnf-client/build/stat
 
 // TODO: remove this after development is done.
 app.use(cors());
+
+// load passport strategies
+ app.use(passport.initialize());
+ var localSignupStrategy = require('./passport/signup_passport');
+ var localLoginStrategy = require('./passport/login_passport');
+ passport.use('local-signup', localSignupStrategy);
+ passport.use('local-login', localLoginStrategy)
 
 app.use('/', index);
 app.use('/news', news);
